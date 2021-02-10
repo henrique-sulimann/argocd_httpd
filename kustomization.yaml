@@ -7,5 +7,5 @@ resources:
 - ingress.yaml
 - preview-service.yaml
 images:
-- name: alexmt/rollouts-demo
+- name: argoproj/rollouts-demo:blue
   newTag: red

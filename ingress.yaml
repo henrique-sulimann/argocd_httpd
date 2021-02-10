@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: rollouts-teste
+  name: blue-green-teste
   annotations:
     #ingress.kubernetes.io/proxy-body-size: 100M
     kubernetes.io/ingress.class: "nginx"
@@ -13,5 +13,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: rollouts-teste
+          serviceName: blue-green-teste
           servicePort: 80
