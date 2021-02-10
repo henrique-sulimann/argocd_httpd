@@ -2,22 +2,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: rollouts-demo
+  name: rollouts-teste
   labels:
-    app: rollouts-demo
+    app: rollouts-teste
 spec:
   replicas: 5
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: rollouts-demo
+      app: rollouts-teste
   template:
     metadata:
       labels:
-        app: rollouts-demo
+        app: rollouts-teste
     spec:
       containers:
-        - name: rollouts-demo
+        - name: rollouts-teste
           image: "alexmt/rollouts-demo:latest"
           ports:
             - name: http
@@ -33,8 +33,8 @@ spec:
               port: http
   strategy:
     blueGreen:
-      activeService: rollouts-demo
-      previewService: rollouts-demo-preview
+      activeService: rollouts-teste
+      previewService: rollouts-teste-preview
      #canary: 
      #  steps:
      #  - setWeight: 20

@@ -1,9 +1,9 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: rollouts-demo
+  name: rollouts-teste
   annotations:
-    ingress.kubernetes.io/proxy-body-size: 100M
+    #ingress.kubernetes.io/proxy-body-size: 100M
     kubernetes.io/ingress.class: "nginx"
     ingress.kubernetes.io/app-root: "/"
 spec:
@@ -13,5 +13,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: rollouts-demo
+          serviceName: rollouts-teste
           servicePort: 80
