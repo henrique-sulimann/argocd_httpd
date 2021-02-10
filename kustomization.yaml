@@ -7,5 +7,5 @@ resources:
 - ingress.yaml
 - preview-service.yaml
 images:
-- name: argoproj/rollouts-demo:blue
+- name: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository
   newTag: red
