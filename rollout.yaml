@@ -1,0 +1,37 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout 
+metadata:
+  name: blue-green-teste
+  labels:
+    app: blue-green-teste
+spec:
+  replicas: 5
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: blue-green-teste
+  template:
+    metadata:
+      labels:
+        app: blue-green-teste
+    spec:
+      containers:
+        - name: blue-green-teste
+          image: "alexmt/rollouts-demo:latest"
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+  strategy:
+    blueGreen:
+      activeService: blue-green-teste
+      previewService: blue-green-teste-preview
