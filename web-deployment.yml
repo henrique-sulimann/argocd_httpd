@@ -12,7 +12,7 @@ spec:
   ports:
     - name: httpd-svc-balancer
       port: 80
-      targetPort: 88888
+      targetPort: 8888
       nodePort: 30010
   type: LoadBalancer
 ---
