@@ -2,41 +2,34 @@ apiVersion: v1
 kind: Service
 metadata:
   name: httpd-svc
-  labels:
-    app: web-balancer
-    type: frontend
 spec:
   selector:
-    app: web-balancer
-    version: 1.0
+    app: web
   ports:
-    - name: httpd-svc
+    - name: httpd
       port: 80
-      targetPort: 80
-      nodePort: 30009
-  type: LoadBalancer
+  type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpd-svc-balancer
+  name: httpd
   labels:
-    app: web-balancer
+    app: web
     tier: frontend
 spec:
   selector:
     matchLabels:
-      app: web-balancer
-  replicas: 5
+      app: web
+  replicas: 3
   template:
     metadata:
-      name: httpd-svc-balancer
+      name: httpd
       labels:
-        app: web-balancer
-        version: 1.0
+        app: web
         tier: frontend
     spec:
       containers:
-        - name: httpd-svc-balancer
+        - name: httpd
           image: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository:latest
 
