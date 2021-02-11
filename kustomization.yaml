@@ -9,5 +9,5 @@ resources:
    - preview-service-web.yaml
    - web-deployment.yml
 images:
-  - name: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository
-    newTag: latest
+  - name: nginx
+    newTag: "1.19.6"
