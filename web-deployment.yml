@@ -12,7 +12,7 @@ spec:
   ports:
     - name: httpd-svc-balancer
       port: 80
-      targetPort: 8888
+      targetPort: 80
       nodePort: 30010
   type: LoadBalancer
 ---
@@ -38,10 +38,10 @@ spec:
     spec:
       containers:
         - name: httpd-svc-balancer
-          image: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository:latest
+          image: nginx:latest
           ports:
             - name: http
-              containerPort: 8888
+              containerPort: 80
               protocol: TCP
   strategy:
     blueGreen:
