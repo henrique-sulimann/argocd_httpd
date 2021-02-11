@@ -4,15 +4,10 @@ kind: Kustomization
 configurations:
   - https://argoproj.github.io/argo-rollouts/features/kustomize/rollout-transform.yaml
 resources:
-#  - rollout.yaml
-#  - service.yaml
-#  - ingress.yaml
-#  - preview-service.yaml
    - ingress-web-preview.yaml
    - ingress-web.yaml
    - preview-service-web.yaml
    - web-deployment.yml
 images:
-  #- name: alexmt/rollouts-demo
-  - name: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository:latest
-    newTag: 1.1
+  - name: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository
+    newTag: red
