@@ -12,5 +12,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: httpd-svc
+          serviceName: httpd-svc-balancer
           servicePort: 80
