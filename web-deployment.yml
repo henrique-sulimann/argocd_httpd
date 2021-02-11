@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app: web-balancer
-    version: "d45gssfh"
+    version: "latest"
   ports:
     - name: httpd-svc-balancer
       port: 80
@@ -33,7 +33,7 @@ spec:
       name: httpd-svc-balancer
       labels:
         app: web-balancer
-        version: "d45gssfh"
+        version: "latest"
         tier: frontend
     spec:
       containers:
