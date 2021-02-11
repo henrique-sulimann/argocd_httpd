@@ -39,6 +39,10 @@ spec:
       containers:
         - name: httpd-svc-balancer
           image: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository:latest
+          ports:
+            - name: http
+              containerPort: 8888
+              protocol: TCP
   strategy:
     blueGreen:
       activeService: httpd-svc-balancer
