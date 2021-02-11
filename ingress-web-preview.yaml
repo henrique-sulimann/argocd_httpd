@@ -4,7 +4,7 @@ metadata:
   name: httpd-svc-preview
   annotations:
     ingress.kubernetes.io/proxy-body-size: 100M
-    kubernetes.io/ingress.class: "httpd"
+    kubernetes.io/ingress.class: "nginx"
     ingress.kubernetes.io/app-root: "/"
 spec:
   rules:
@@ -13,4 +13,4 @@ spec:
       - path: /
         backend:
           serviceName: httpd-svc-preview
-          servicePort: 8888
+          servicePort: 80
