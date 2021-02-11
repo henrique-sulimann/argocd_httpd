@@ -8,7 +8,7 @@ metadata:
 spec:
   selector:
     app: web-balancer
-    version: 1.0
+    version: "d45gssfh"
   ports:
     - name: httpd-svc-preview
       port: 80
