@@ -10,4 +10,4 @@ resources:
    - web-deployment.yml
 images:
   - name: 132818155912.dkr.ecr.us-east-1.amazonaws.com/terradorm-multi-cloud-repository
-    newTag: "latest"
+    newTag: "1.1"
