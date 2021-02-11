@@ -13,7 +13,7 @@ spec:
     - name: httpd-svc-balancer
       port: 80
       targetPort: 80
-      nodePort: 30010
+      protocol: TCP
   type: LoadBalancer
 ---
 apiVersion: argoproj.io/v1alpha1
@@ -28,12 +28,13 @@ spec:
     matchLabels:
       app: web-balancer
   replicas: 5
+  revisionHistoryLimit: 3
   template:
     metadata:
       name: httpd-svc-balancer
       labels:
         app: web-balancer
-        version: "latest"
+        #version: "latest"
         tier: frontend
     spec:
       containers:
