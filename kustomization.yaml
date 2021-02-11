@@ -10,7 +10,7 @@ resources:
 #  - preview-service.yaml
    - ingress-web-preview.yaml
    - ingress-web.yaml
-   - preview-service.yaml
+   - preview-service-web.yaml
    - web-deployment.yml
 images:
   #- name: alexmt/rollouts-demo
