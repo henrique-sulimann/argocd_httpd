@@ -4,7 +4,6 @@ kind: Kustomization
 configurations:
   - https://argoproj.github.io/argo-rollouts/features/kustomize/rollout-transform.yaml
 resources:
-   - ingress-web-preview.yaml
    - ingress-web.yaml
    - preview-service-web.yaml
    - web-deployment.yml
