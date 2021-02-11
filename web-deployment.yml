@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: httpd-svc-preview
+  name: httpd-svc-balancer
   labels:
     app: web-balancer
     type: frontend
@@ -10,7 +10,7 @@ spec:
     app: web-balancer
     version: 1.0
   ports:
-    - name: httpd-svc-preview
+    - name: httpd-svc-balancer
       port: 80
       targetPort: 80
       nodePort: 30010
