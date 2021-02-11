@@ -12,6 +12,6 @@ spec:
   ports:
     - name: httpd-svc-preview
       port: 80
-      targetPort: 80
+      targetPort: 8888
       nodePort: 30009
   type: LoadBalancer
