@@ -9,4 +9,4 @@ resources:
    - web-deployment.yml
 images:
   - name: nginx
-    newTag: "1.19"
+    newTag: "1.18"
