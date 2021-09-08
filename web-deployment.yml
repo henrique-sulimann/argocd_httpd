@@ -31,7 +31,6 @@ spec:
   revisionHistoryLimit: 3
   template:
     metadata:
-      name: httpd-svc-balancer
       labels:
         app: web-balancer
         #version: "latest"
